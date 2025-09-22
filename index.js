@@ -9,7 +9,7 @@ if (!TOKEN) {
 }
 
 const bot = new Telegraf(TOKEN);
-bot.on(message('text'), async (ctx) => {
+bot.on('text', async (ctx) => {
   // Explicit usage
   await ctx.telegram.sendMessage(ctx.message.chat.id, `Hello ${ctx.state.role}`)
 
